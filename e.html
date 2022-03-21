@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo del área de un trapecio</title>
+</head>
+<body bgcolor="#E3EFDE">
+
+	<table align="center" border="1" width="50%">
+
+		<tr align="center">
+			<td colspan=2 style="background-color: #E0F6F1;"><span style="font-size: 70px; line-height: normal;color: #68A496;"><font face="Fainland">ÁREA DE UN TRAPECIO</font></span></td>
+		</tr>
+
+		<tr align="center">
+			<td width="50%" style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Base 1</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="b1" size=5></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Base 2</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="b2" size=5></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Altura</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="h" size=5></td>
+		</tr>
+
+		<tr align="center">
+			<td colspan=2 style="background-color: #F0F6F2;"><input type="button" value="Calcular" onclick="encontrar_a_t()" style="font-size: 20px; font-family: AHintofSass"></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Área</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="area_T" size=5 disabled></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center"><img src="trapecio.jpg" align=middle width=500 heigth=500></td>
+		</tr>
+
+	</table>
+
+	<br>
+	<br>
+
+	<div align="center" style="border: 1px;">
+		<button onclick="document.location='pag principal.html'" style="font-size: 25px; font-family: Fakedes Outline; background-color: #CDE0D9; border: dashed;">Regresar a la Página Principal</button>
+	</div>
+
+
+
+	<script>
+
+		function encontrar_a_t(){
+			var a = Number(document.getElementById("b1").value);
+			var b = Number(document.getElementById("b2").value);
+			var h = Number(document.getElementById("h").value);
+
+			var a_t = ((a+b)/2)*h;
+
+			document.getElementById("area_T").value = a_t.toFixed(2);
+		}
+		
+	</script>
+
+
+
+</body>
+</html>

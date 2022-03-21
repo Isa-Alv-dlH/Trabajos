@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo del volumen del prisma rectangular</title>
+</head>
+<body bgcolor="#E3EFDE">
+
+	<table align="center" border="1" width="50%">
+
+		<tr align="center">
+			<td colspan=2 style="background-color: #E0F6F1;"><span style="font-size: 70px; line-height: normal;color: #68A496;"><font face="Fainland">VOLUMEN DEL PRISMA RECTANGULAR</font></span></td>
+		</tr>
+
+		<tr align="center">
+			<td width="50%" style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Largo</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="a" size=5></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Ancho</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="b" size=5></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Altura</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="h" size=5></td>
+		</tr>
+
+		<tr align="center">
+			<td colspan=2 style="background-color: #F0F6F2;"><input type="button" value="Calcular" onclick="encontrar_v_pr()" style="font-size: 20px; font-family: AHintofSass"></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Área</font></td>
+			<td style="background-color: #B0F2D4;"><input type="text" id="volumen_PR" size=5 disabled></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center"><img src="prismar.jpg" align=middle width=350 heigth=350></td>
+		</tr>
+
+	</table>
+
+	<br>
+	<br>
+
+	<div align="center" style="border: 1px;">
+		<button onclick="document.location='pag principal.html'" style="font-size: 25px; font-family: Fakedes Outline; background-color: #CDE0D9; border: dashed;">Regresar a la Página Principal</button>
+	</div>
+
+
+
+	<script>
+
+		function encontrar_v_pr(){
+			var a = Number(document.getElementById("a").value);
+			var b = Number(document.getElementById("b").value);
+			var h = Number(document.getElementById("h").value);
+
+			var v_pr = a * b * h;
+
+			document.getElementById("volumen_PR").value = v_pr.toFixed(2);
+		}
+		
+	</script>
+
+
+
+</body>
+</html>

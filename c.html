@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo de la distancia entre dos puntos</title>
+</head>
+
+<body bgcolor="#E3EFDE">
+
+	<table align="center" border="1" width="50%">
+
+		<tr align="center">
+			<td colspan=2 align="center" style="background-color: #E0F6F1;"><span style="font-size: 70px; line-height: normal;color: #68A496;"><font face="Fainland">DISTANCIA ENTRE 2 PUNTOS</font></span></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">x1:<input type="text" id="x1" size=10></font></td>
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">y1:<input type="text" id="y1" size=10></font></td>
+		</tr>
+
+		<tr align="center">
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">x2:<input type="text" id="x2" size=10></font></td>
+			<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">y2:<input type="text" id="y2" size=10></font></td>
+		</tr>
+
+		<tr>
+			<td colspan=2  align=center style="background-color: #F0F6F2;"><input type="button" value="Encontrar" onclick="distancia()" style="font-size: 20px; font-family: AHintofSass"></td>
+		</tr>
+
+		<tr>
+			<td colspan=2 align="center" style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Distancia = <input type="text" id="distancia" size=10 disabled></font></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center"><img src="distancia.jpg" align=middle width=700 heigth=700></td>
+		</tr>
+
+	</table>
+
+	<br>
+	<br>
+
+	<div align="center" style="border: 1px;">
+		<button onclick="document.location='pag principal.html'" style="font-size: 25px; font-family: Fakedes Outline; background-color: #CDE0D9; border: dashed;">Regresar a la Página Principal</button>
+	</div>
+
+
+
+	<script>
+
+		function distancia(){
+			var x1 = Number(document.getElementById("x1").value);
+			var y1 = Number(document.getElementById("y1").value);
+			var x2 = Number(document.getElementById("x2").value);
+			var y2 = Number(document.getElementById("y2").value);
+
+			var d = Math.sqrt((x2 - x1)**2 + (y2-y1)**2);
+
+			document.getElementById("distancia").value = d.toFixed(2);
+		}
+		
+	</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculo del IMC</title>
+</head>
+<body bgcolor="#E3EFDE">
+
+<table align="center" border=1 width="50%">
+
+	<tr>
+		<td colspan="2" align="center" style="background-color: #E0F6F1;"><span style="font-size: 70px; line-height: normal;color: #68A496;"><font face="Fainland">CALCULO DEL IMC</font></span></td>
+	</tr>
+
+	<tr align="center">
+		<td width="50%" style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Peso</font></td>
+		<td style="background-color: #B0F2D4;"><input type="text" id="peso" size=5><font face="AHintofSass" size="5">kg</font></td>
+	</tr>
+
+	<tr align="center">
+		<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Estatura</font></td>
+		<td style="background-color: #B0F2D4;"><input type="text" id="estatura" size=5><font face="AHintofSass" size="5">m</font></td>
+	</tr>
+
+	<tr>
+		<td colspan=2  align=center  style="background-color: #F0F6F2;"><input type="button" value="Calcular" onclick="calcular_imc()" style="font-size: 20px; font-family: AHintofSass"></td>
+	</tr>
+
+	<tr align="center">
+		<td style="background-color: #B0F2D4;"><font face="AHintofSass" size="5">Resultado</font></td>
+		<td style="background-color: #B0F2D4;"><input type="text" id="imc" disabled></td>
+	</tr>
+
+	<tr>
+		<td colspan="2" align="center"><img src="imc.jpg" align=middle width=700 heigth=700></td>
+	</tr>
+
+</table>
+
+<br>
+<br>
+
+<div align="center" style="border: 1px;">
+	<button onclick="document.location='pag principal.html'" style="font-size: 25px; font-family: Fakedes Outline; background-color: #CDE0D9; border: dashed;">Regresar a la Página Principal</button>
+</div>
+
+
+
+<script>
+
+	function calcular_imc(){
+		var peso = Number(document.getElementById("peso").value);
+		var estatura = Number(document.getElementById("estatura").value);
+
+		var imc = peso/(estatura**2); 
+
+		document.getElementById("imc").value = imc.toFixed(2);
+		}
+		
+</script>
+
+
+
+</body>
+</html>
